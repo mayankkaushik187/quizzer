@@ -1,0 +1,11 @@
+.question_card { 
+    min-width:auto;
+    max-width:auto;
+    justify-content: center;
+    align-content: center;
+    display: flex;    
+    position: relative;
+    left: 0;
+    top: 100px;
+
+}
