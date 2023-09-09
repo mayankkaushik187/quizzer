@@ -3,19 +3,8 @@ import Card from "@mui/material/Card"
 import CardContent from "@mui/material/CardContent"
 import Typography from "@mui/material/Typography"
 import "./Question.css"
-const Question = () => {
-    const questions = [
-        {
-            id: 1,
-            question: "What is the name of this app?",
-            answers: {
-                answer_a: "quizzer",
-                answer_b: "wizzard",
-                answer_c: "twizzler",
-                answer_d: "rizzard",
-            },
-        },
-    ]
+const Question = ({ questions }) => {
+    console.log("Question ka ", questions)
     return (
         <div className="question_card">
             <Card>
