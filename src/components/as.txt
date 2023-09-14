@@ -1,0 +1,29 @@
+const [questionAnswer, setQuestionAnswer] = useState([])
+  const shuffle = (array) => {
+    let currentIndex = array.length,
+      randomIndex
+    while (currentIndex > 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex)
+      currentIndex--
+      ;[array[currentIndex], array[randomIndex]] = [
+        array[randomIndex],
+        array[currentIndex],
+      ]
+    }
+    return array
+  }
+  var questionWithAnswers = []
+  questions.forEach((question) => {
+    var answers = []
+    answers = answers.concat(question.incorrect_answers)
+    answers.push(question.correct_answer)
+    answers = shuffle(answers)
+    const obj = {
+      question: question.question,
+      answers: answers,
+      correct_answer: question.correct_answer,
+    }
+    questionWithAnswers.push(obj)
+  })
+  setQuestionAnswer(questionWithAnswers)
+  console.log("Questions final", questionAnswer)
